@@ -1,0 +1,37 @@
+{
+    "name": "QR Reader",
+    "version": "1.0",
+    "description": "Détecte les QR Codes",
+    "manifest_version": 2,
+    "permissions": [
+        "declarativeContent",
+        "tabs",
+        "activeTab",
+        "storage"
+    ],
+    "background": {
+        "scripts": [
+            "background.js",
+            "js/async.min.js",
+            "js/jquery-3.3.1.min.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": {
+            "32": "images/qr_32.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content_js/content.js"]
+        }
+    ],
+    "icons": {
+        "16": "images/qr_16.png",
+        "32": "images/qr_32.png",
+        "48": "images/qr_48.png",
+        "128": "images/qr_128.png"
+    }
+}

@@ -1,0 +1,55 @@
+.wrapper {
+    width: 500px;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-size: 13px;
+    margin: 0!important;
+}
+
+.square {
+    position: relative;
+    width: auto;
+}
+
+.square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.max-lines-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.max-lines-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.image-div {
+    background-repeat:  no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.data-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
